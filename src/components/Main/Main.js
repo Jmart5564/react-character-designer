@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Main.css';
-import background from './images/background.jpeg';
-import Character from './components/Character/Character';
+import background from '../images/background.jpg';
+import Character from '../Character/Character';
 
 export default function Main() {
   const [head, setHead] = useState('dog');
