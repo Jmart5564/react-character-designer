@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Main.css';
-import background from '../images/background.jpg';
+import background from '../../background.jpg';
 import Character from '../Character/Character';
 
 export default function Main() {
-  const [head, setHead] = useState('dog');
-  const [middle, setMiddle] = useState('blue');
-  const [bottom, setBottom] = useState('blue');
-    
+  const [head] = useState('cat');
+  const [middle] = useState('armour');
+  const [bottom] = useState('skeleton');
+  
   return (
     <div className="main" style={{ backgroundImage: `url(${background})` }}>
       <main>
