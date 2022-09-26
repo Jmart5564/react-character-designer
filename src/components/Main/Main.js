@@ -3,6 +3,7 @@ import './Main.css';
 import background from '../../background.jpg';
 import Character from '../Character/Character';
 import Slogan from '../Slogan/Slogan';
+import Stats from '../Stats/Stats';
 
 export default function Main() {
   const [head] = useState('cat');
@@ -17,6 +18,9 @@ export default function Main() {
         <section className="character-designer">
           <div className="display">
             <Character {...{ head, middle, bottom }} />
+          </div>
+          <div>
+            <Stats slogans={slogans} />
           </div>
           <div>
             <Slogan setSlogans={setSlogans} />
