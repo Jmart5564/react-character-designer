@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
-export default function Slogan({ slogan, setSlogan }) {
-
+export default function Slogan({ setSlogans }) {
+  const [currentSlogan, setCurrentSlogan] = useState('');
     
-  const handleAdd = () => {
-    if (!slogan) return;
+  const handleAdd = (e) => {
+    e.preventDefault();
+    if (!currentSlogan) return;
     setSlogans((prevState) => {
-      return [...prevState, slogan];
+      return [...prevState, currentSlogan];
     });
-    setSlogan('');
+    setCurrentSlogan('');
   };
 
   return (
@@ -17,8 +18,8 @@ export default function Slogan({ slogan, setSlogan }) {
     <form onSubmit={handleAdd}>
       <label>
         NEW SLOGAN
-        <input type="textarea" value={slogan} onChange={(e) => {
-          setSlogan(e.target.value);
+        <input type="textarea" value={currentSlogan} onChange={(e) => {
+          setCurrentSlogan(e.target.value);
         }}></input>
       </label>
       <button>Add Slogan</button>
