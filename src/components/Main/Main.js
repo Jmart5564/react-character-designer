@@ -34,9 +34,9 @@ export default function Main() {
   return (
     <div className="main" style={{ backgroundImage: `url(${background})` }}>
       <main>
-        <h1>Character Designer</h1>
         <section className="character-designer">
-          <div>
+          <h1>Character Designer</h1>
+          <div className="creator">
             <Creator head={head} middle={middle} bottom={bottom} handleChange={handleChange} />
           </div>
           <div className="display">

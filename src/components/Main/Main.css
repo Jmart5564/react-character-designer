@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 800px;
+}
+
+section {
+    background-color: black;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.display {
+    padding-top: 30px;
+}
+
+label {
+    padding-left: 15px;
+}
